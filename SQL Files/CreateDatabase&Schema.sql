@@ -1,0 +1,10 @@
+CREATE DATABASE iPPiChatbot
+GO
+
+USE iPPiChatbot
+GO
+
+CREATE SCHEMA meta
+
+CREATE SCHEMA usr
+

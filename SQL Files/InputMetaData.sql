@@ -1,0 +1,909 @@
+USE iPPiChatbot
+GO
+
+INSERT INTO meta.ConversationWindow
+(
+	conversationKey
+)
+VALUES
+(
+	'COURTESIES'
+),
+(
+	'PRE_REGISTRATION'
+),
+(
+	'MISSING_DATA'
+),
+(
+	'VALUATION'
+),
+(
+	'USER_QUERY'
+),
+(
+	'FEEDBACK'
+)
+
+-----------------Pre-Registration Data--------------------------------------------------
+
+INSERT INTO meta.question
+(
+	conversationID,
+	questionType,
+	questionKey,
+	questionValue
+)
+VALUES
+(
+	10,
+	'ASSERTIVE',
+	'AS_GREETING',
+	'Hello, How are ya!!'
+),
+(
+	10,
+	'ASSERTIVE',
+	'AS_THANK',
+	'Thank you, and good day to ya!!'
+),
+(
+	11,
+	'QUESTION',
+	'QUE_NAME',
+	'My name is Jarvis, and you are?'
+),
+(
+	11,
+	'QUESTION',
+	'QUE_PROFESSION',
+	'Just to serve you better, let me know who you are by profession?'
+),
+(
+	11,
+	'QUESTION',
+	'QUE_EMAIL',
+	'Can I get your E-mail?'
+),
+(
+	11,
+	'QUESTION',
+	'QUE_TRIAL_VERSION',
+	'Do you wish to sign up for a trial version?'
+),
+(
+	11,
+	'ASSERTIVE',
+	'AS_VERIFICATION_MAIL',
+	'Thank you so much. A verification mail has been sent to you, please check your inbox.'
+),
+(
+	11,
+	'QUESTION',
+	'QUE_TUTORIAL',
+	'Thank you for signing up for our trial version. Would you be interested to take a small tutorial to help you navigate the application easily?'
+),
+(
+	11,
+	'ASSERTIVE',
+	'AS_TUTORIAL_VIDEO',
+	'Please wait while I redirect you to the tutorial video.'
+)
+
+INSERT INTO meta.Answer
+(
+	questionID,
+	answerType,
+	answerKey,
+	answerValue
+)
+VALUES
+(
+	1002,
+	'TEXT',
+	'NAME',
+	NULL
+),
+(
+	1003,
+	'RADIO_BUTTON',
+	'PROFESSION_REALTOR',
+	'Realtor'
+),
+(
+	1003,
+	'RADIO_BUTTON',
+	'PROFESSION_BANKER',
+	'Banker'
+),
+(
+	1003,
+	'RADIO_BUTTON',
+	'PROFESSION_GOVT_OFFICIAL',
+	'Government Official'
+),
+(
+	1003,
+	'RADIO_BUTTON',
+	'PROFESSION_STUDENT',
+	'Student'
+),
+(
+	1003,
+	'RADIO_BUTTON',
+	'OTHER',
+	'Other'
+),
+(
+	1004,
+	'TEXT',
+	'EMAIL',
+	NULL
+),
+(
+	1005,
+	'RADIO_BUTTON',
+	'TRIALVERSION_YES',
+	'Yes'
+),
+(
+	1005,
+	'RADIO_BUTTON',
+	'TRIALVERSION_NO',
+	'No'
+),
+(
+	1006,
+	'NONE',
+	'NO_ANSWER',
+	NULL
+),
+(
+	1007,
+	'RADIO_BUTTON',
+	'TUTORIAL_YES',
+	'Yes'
+),
+(
+	1007,
+	'RADIO_BUTTON',
+	'TUTORIAL_NO',
+	'No'
+),
+(
+	1008,
+	'NONE',
+	'NO_ANSWER',
+	NULL
+)
+
+
+-------------------------------Missing Data---------------------------------------
+
+INSERT INTO meta.question
+(
+	conversationID,
+	questionType,
+	questionKey,
+	questionValue
+)
+VALUES
+(
+	12,
+	'QUESTION',
+	'QUE_INCENTIVE',
+	'Hey! How are ya! Hope your search was helpful. How would you like to win an easy prize?'
+),
+(
+	12,
+	'QUESTION',
+	'QUE_MISSING_DATA',
+	'There are a few missing data points in this property. If you could point us in the right direction, it would be really helpful?'
+),
+(
+	12,
+	'QUESTION',
+	'QUE_LOCATION',
+	'Where is this property located?'
+),
+(
+	12,
+	'QUESTION',
+	'QUE_PROPERTY_TYPE',
+	'What type of property is this?'
+),
+(
+	12,
+	'QUESTION',
+	'QUE_BEDS',
+	'How many beds does this property have?'
+),
+(
+	12,
+	'ASSERTION',
+	'AS_INCENTIVE',
+	'Thanks a lot for your help. You have recieved a chance to win a brand new iPhone SE 2. We will notify you further through mail.'
+)
+
+INSERT INTO meta.Answer
+(
+	questionID,
+	answerType,
+	answerKey,
+	answerValue
+)
+VALUES
+(
+	1009,
+	'RADIO_BUTTON',
+	'INCENTIVE_YES',
+	'Yes'
+),
+(
+	1009,
+	'RADIO_BUTTON',
+	'INCENTIVE_NO',
+	'No'
+),
+(
+	1010,
+	'RADIO_BUTTON',
+	'MISSING_YES',
+	'Yes'
+),
+(
+	1010,
+	'RADIO_BUTTON',
+	'MISSING_NO',
+	'No'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Baggotrath'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Baggotrath East'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Baggotrath North'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Ballsbridge'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Beggarsbush'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Booterstown'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Clonskeagh'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'DonnyBrook'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'DonnyBrook East'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'DonnyBrook West'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Forty Acres'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Grangegorman East'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Grangegorman West'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Intake'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Irishtown'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Lovescharity'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Merrion'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Ringsend'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Sandymount'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Smotscourt'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'South Lots'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'Stillorgan'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'St. George''s'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'St. Mark''s'
+),
+(
+	1011,
+	'DROPDOWN',
+	'LOCATION',
+	'St. Peter''s'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'House'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Semi-Detached House'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Detached House'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Terraced House'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'End of Terrace House'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Townhouse'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Bungalow'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Cottage'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Apartment'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Duplex'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Land'
+),
+(
+	1012,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Site'
+),
+(
+	1013,
+	'DROPDOWN',
+	'BEDS',
+	'1'
+),
+(
+	1013,
+	'DROPDOWN',
+	'BEDS',
+	'2'
+),
+(
+	1013,
+	'DROPDOWN',
+	'BEDS',
+	'3'
+),
+(
+	1013,
+	'DROPDOWN',
+	'BEDS',
+	'4'
+),
+(
+	1013,
+	'DROPDOWN',
+	'BEDS',
+	'5'
+),
+(
+	1013,
+	'DROPDOWN',
+	'BEDS',
+	'6+'
+),
+(
+	1014,
+	'NONE',
+	'NO_ANSWER',
+	NULL
+)
+
+------------------------------Valuation----------------------------------------------
+
+INSERT INTO meta.question
+(
+	conversationID,
+	questionType,
+	questionKey,
+	questionValue
+)
+VALUES
+(
+	13,
+	'QUESTION',
+	'QUE_VALUATION',
+	'Hey! Do you want to perform a quick property valuation?'
+),
+(
+	13,
+	'QUESTION',
+	'QUE_LOCATION',
+	'Great! So lets begin by telling me where your property is located:'
+),
+(
+	13,
+	'QUESTION',
+	'QUE_PROP_TYPE',
+	'Okay, what type of property is this?'
+),
+(
+	13,
+	'QUESTION',
+	'QUE_BEDS',
+	'How many beds does the property have?'
+),
+(
+	13,
+	'QUESTION',
+	'QUE_IF_SIZE',
+	'Do you know the size of this house in sqM?'
+),
+(
+	13,
+	'QUESTION',
+	'QUE_SIZE',
+	'Size of the house(sqM):'
+),
+(
+	13,
+	'QUESTION',
+	'QUE_IF_LAND_SITE',
+	'Do you know the size of this land site in acres?'
+),
+(
+	13,
+	'QUESTION',
+	'QUE_LAND_SITE',
+	'Size of the Land Site(acres):'
+),
+(
+	13,
+	'ASSERTION',
+	'AS_PROP_VALUE',
+	'Your property is estimated at: EUR '
+)
+
+INSERT INTO meta.Answer
+(
+	questionID,
+	answerType,
+	answerKey,
+	answerValue
+)
+VALUES
+(
+	1015,
+	'RADIO_BUTTON',
+	'VALUATION_YES',
+	'Yes'
+),
+(
+	1015,
+	'RADIO_BUTTON',
+	'VALUATION_NO',
+	'No'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Baggotrath'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Baggotrath East'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Baggotrath North'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Ballsbridge'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Beggarsbush'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Booterstown'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Clonskeagh'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'DonnyBrook'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'DonnyBrook East'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'DonnyBrook West'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Forty Acres'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Grangegorman East'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Grangegorman West'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Intake'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Irishtown'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Lovescharity'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Merrion'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Ringsend'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Sandymount'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Smotscourt'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'South Lots'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'Stillorgan'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'St. George''s'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'St. Mark''s'
+),
+(
+	1016,
+	'DROPDOWN',
+	'LOCATION',
+	'St. Peter''s'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'House'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Semi-Detached House'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Detached House'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Terraced House'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'End of Terrace House'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Townhouse'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Bungalow'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Cottage'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Apartment'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Duplex'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Land'
+),
+(
+	1017,
+	'DROPDOWN',
+	'PROPERTY_TYPE',
+	'Site'
+),
+(
+	1018,
+	'DROPDOWN',
+	'BEDS',
+	'1'
+),
+(
+	1018,
+	'DROPDOWN',
+	'BEDS',
+	'2'
+),
+(
+	1018,
+	'DROPDOWN',
+	'BEDS',
+	'3'
+),
+(
+	1018,
+	'DROPDOWN',
+	'BEDS',
+	'4'
+),
+(
+	1018,
+	'DROPDOWN',
+	'BEDS',
+	'5'
+),
+(
+	1018,
+	'DROPDOWN',
+	'BEDS',
+	'6+'
+),
+(
+	1019,
+	'RADIO_BUTTON',
+	'SIZE_YES',
+	'Yes'
+),
+(
+	1019,
+	'RADIO_BUTTON',
+	'SIZE_NO',
+	'No'
+),
+(
+	1020,
+	'NUMBER',
+	'SIZE_NUM',
+	NULL
+),
+(
+	1021,
+	'RADIO_BUTTON',
+	'SIZE_YES',
+	'Yes'
+),
+(
+	1021,
+	'RADIO_BUTTON',
+	'SIZE_NO',
+	'No'
+),
+(
+	1022,
+	'NUMBER',
+	'SIZE_NUM',
+	NULL
+),
+(
+	1023,
+	'NONE',
+	'NO_ANSWER',
+	NULL
+)

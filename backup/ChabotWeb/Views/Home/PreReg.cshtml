@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "PreReg";
+}
+
+<div ng-controller="preReg">
+   <h1>PreReg</h1>
+    <div id="botNotification" ng-if="requestDone" ng-click="toggleChatWindow()">
+        You have a new message. Click Here!!
+    </div>
+    <div id="botClosed" ng-if="chatClosed" ng-click="toggleChatWindow()">
+        <i class="fas fa-robot"></i>
+    </div>
+    <div id="chatWindow" ng-if="!chatClosed">
+        <div id="chatbotTitle">
+            <div id="botLogoText">
+                <div id="botLogo">
+                    <img id="iPPiLogo" src="~/images/logo-icon.PNG">
+                </div>
+                <div id="iPPiBotText">iPPi Bot</div>
+            </div>
+            <div id="closeWindow" ng-click="closeWindow()"><i class="fas fa-times"></i></div>
+        </div>
+        <div id="convoBox" ng-init="firstConv()">
+            <div ng-repeat="convo in conversation">
+                <div ng-if="$even" ng-init="scrollDown()" class="botMessage">
+                    <div class="question">
+                        <div ng-if="convo.answer.answerType == 'TEXT'">
+                            {{convo.question}}
+                        </div>
+                        <div ng-if="convo.answer.answerType == 'RADIO_BUTTON'">
+                            <div id="questionLabel">{{convo.question}}</div>
+                            <label ng-repeat="option in convo.answer.answer">
+                                <input type="radio" ng-click="selectRadio()" ng-model="input.Radio" ng-value="option" /> {{option}}
+                            </label>
+                        </div>
+                        <div ng-if="convo.answer.answerType == 'DROPDOWN'">
+                            <div id="questionLabel">{{convo.question}}</div>
+                            <div class="selectBox">
+                                <select ng-model="input.dropdown" ng-options="option for option in convo.answer.answer" ng-change="selectDropdown()">
+                                </select>
+                            </div>
+                        </div>
+                        <div ng-if="convo.answer.answerType == 'MULTI_SELECT'">
+                            <div id="questionLabel">{{convo.question}}</div>
+                            <label ng-repeat="option in convo.answer.answer">
+                                <input type="checkbox" ng-click="selectCheckbox(convo,$index)" ng-model="input.checkbox[$index]" ng-value="option" /> {{option}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="$odd" ng-init="scrollDown()" class="userMessage"><div class="response">{{convo.question}}</div></div>
+            </div>
+        </div>
+        <div id="botInput">
+            <input id="userInput" type="text" ng-model="input.Text" ng-keydown="$event.keyCode == 13 && submitInput()" placeholder="Your text here..." />
+            <div id="submitBtn" ng-click="submitInput()"><i class="fas fa-arrow-right"></i></div>
+        </div>
+    </div>
+</div>
+
+
