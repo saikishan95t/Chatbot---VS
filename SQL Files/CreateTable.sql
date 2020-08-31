@@ -28,7 +28,7 @@ CREATE TABLE meta.Answer
 	questionID			INT,
 	answerType			VARCHAR(50),
 	answerKey			VARCHAR(50),
-	answerValue			NVARCHAR(200),
+	answerValue			NVARCHAR(4000),
 	isDeleted			BIT DEFAULT 0,
 	PRIMARY KEY (answerID),
 	FOREIGN KEY (questionID) REFERENCES meta.Question(questionID)
@@ -75,6 +75,28 @@ CREATE TABLE usr.PropertyValuation
 	PRIMARY KEY (propertyValuationID)
 )
 	
+CREATE TABLE usr.UserQuery
+(
+	userQueryID				INT IDENTITY(1000,1),
+	userQueryValue			NVARCHAR(1000),
+	userID					INT NULL,
+	isResolved				BIT DEFAULT 0,
+	isDeleted				BIT DEFAULT 0,
+	CreatedDate				DATETIME DEFAULT GETUTCDATE(),
+	PRIMARY KEY (userQueryID)
+)
+
+CREATE TABLE usr.UserFeedback
+(
+	userFeedbackID			INT IDENTITY(1000,1),
+	userRating				NVARCHAR(20),
+	userComments			NVARCHAR(200),
+	conversationID			INT NULL,
+	userID					INT NULL,
+	isDeleted				BIT DEFAULT 0,
+	CreatedDate				DATETIME DEFAULT GETUTCDATE(),
+	PRIMARY KEY (userFeedbackID)
+)
 
 
 ----------------------------Type Tables-------------------------

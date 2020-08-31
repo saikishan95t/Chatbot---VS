@@ -56,5 +56,30 @@ namespace ChatbotAPI.Controllers
             value.Value = returnValue;
             return GlobalFunctions.CreateResponse<PropertyValueModel>(request, HttpStatusCode.OK, value);
         }
+
+        [HttpPost]
+        [Route("userQuery")]
+        public async Task<HttpResponseMessage> postUserQuery(List<PostDataModel> query)
+        {
+            HttpRequestMessage request = Request;
+            int returnValue = await postDataRepository.postUserQuery(query);
+            if (returnValue == 0)
+                return GlobalFunctions.CreateResponse<MetadataModel>(request, HttpStatusCode.OK, null);
+            else
+                return GlobalFunctions.CreateResponse<MetadataModel>(request, HttpStatusCode.InternalServerError, null);
+        }
+
+        [HttpPost]
+        [Route("feedback")]
+        public async Task<HttpResponseMessage> postFeedback(List<PostDataModel> feedback)
+        {
+            HttpRequestMessage request = Request;
+            int returnValue = await postDataRepository.postFeedback(feedback);
+            if (returnValue == 0)
+                return GlobalFunctions.CreateResponse<MetadataModel>(request, HttpStatusCode.OK, null);
+            else
+                return GlobalFunctions.CreateResponse<MetadataModel>(request, HttpStatusCode.InternalServerError, null);
+        }
+
     }
 }

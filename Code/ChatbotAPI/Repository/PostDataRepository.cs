@@ -67,5 +67,39 @@ namespace ChatbotAPI.Repository
             return returnValue;
         }
 
+        public async Task<int> postUserQuery(List<PostDataModel> query)
+        {
+            int returnValue;
+            DataTable user = GlobalFunctions.ToDataTable<PostDataModel>(query);
+            DynamicParameters param = new DynamicParameters();
+            param.Add("@userQuery", user.AsTableValuedParameter("[usr].[UserDetails]"));
+            param.Add(name: "@ReturnStatus", dbType: DbType.Int32, direction: ParameterDirection.Output);
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["iPPiDatabase"].ConnectionString))
+            {
+                connection.Open();
+                await connection.ExecuteAsync("usr.usp_PostUserQuery", param, commandType: CommandType.StoredProcedure);
+                connection.Close();
+                returnValue = param.Get<int>("@ReturnStatus"); ;
+            }
+            return returnValue;
+        }
+
+        public async Task<int> postFeedback(List<PostDataModel> feedback)
+        {
+            int returnValue;
+            DataTable user = GlobalFunctions.ToDataTable<PostDataModel>(feedback);
+            DynamicParameters param = new DynamicParameters();
+            param.Add("@feedback", user.AsTableValuedParameter("[usr].[UserDetails]"));
+            param.Add(name: "@ReturnStatus", dbType: DbType.Int32, direction: ParameterDirection.Output);
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["iPPiDatabase"].ConnectionString))
+            {
+                connection.Open();
+                await connection.ExecuteAsync("usr.usp_PostFeedback", param, commandType: CommandType.StoredProcedure);
+                connection.Close();
+                returnValue = param.Get<int>("@ReturnStatus"); ;
+            }
+            return returnValue;
+        }
+
     }
 }

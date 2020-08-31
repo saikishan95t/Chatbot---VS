@@ -12,5 +12,7 @@ namespace ChatbotAPI.Repository.Interface
         Task<int> postUserDetails(List<PostDataModel> userDetails);
         Task<int> postMissingData(List<PostDataModel> missingData);
         Task<int> estimateProperty(List<PostDataModel> property);
+        Task<int> postUserQuery(List<PostDataModel> query);
+        Task<int> postFeedback(List<PostDataModel> feedback);
     }
 }

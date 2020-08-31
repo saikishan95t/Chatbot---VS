@@ -20,6 +20,7 @@ namespace ChatbotAPI.Controllers
         }
 
         [HttpGet]
+        //[Authorize]
         [Route("getMetaData")]
         public async Task<HttpResponseMessage> getMetaData(string ConversationType)
         {

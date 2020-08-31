@@ -49,6 +49,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "UrlRewritingNet": {
+              "target": "Package",
+              "version": "[2.0.7, )"
             }
           },
           "imports": [

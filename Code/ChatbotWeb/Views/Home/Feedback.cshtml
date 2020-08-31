@@ -3,5 +3,13 @@
     ViewData["Title"] = "Feedback";
 }
 
-<h1>Feedback</h1>
+<div ng-controller="feedback">
+    <h1>Feedback</h1>
+    <p>
+        After users complete an activity like creation of appraisal or providing missing data
+        fields in a property, the bot should ideally pop up with the following conversation and gather 
+        all the relevant information from them and post it to the database.
+    </p>
+    <partial name="~/Views/Shared/botWindow.cshtml" />
+</div>
 

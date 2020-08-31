@@ -38,7 +38,7 @@ BEGIN
 		answerID			INT,
 		answerType			NVARCHAR(200),
 		answerKey			NVARCHAR(200),
-		answerValue			NVARCHAR(200)
+		answerValue			NVARCHAR(4000)
 	)
 
 	INSERT INTO #MetaDataTemp

@@ -22,7 +22,7 @@
         <div id="closeWindow" ng-click="closeWindow()"><i class="fas fa-times"></i></div>
     </div>
     <div id="convoBox" ng-init="firstConv()">
-        <div ng-repeat="convo in conversation">
+        <div ng-repeat="convo in conversation track by $index">
             <div ng-if="$even" class="botMessage">
                 <div class="question">
                     <div ng-init="scrollDown()" ng-if="convo.Answers[0].AnswerType == 'TEXT' || convo.Answers[0].AnswerType == 'NONE'">
@@ -49,7 +49,7 @@
                     </div>
                     <div ng-if="convo.Answers[0].AnswerType == 'NUMBER'">
                         <div id="questionLabel">{{convo.Question}}</div>
-                        <input type="number" ng-click="selectNumber()" ng-keydown="$event.keyCode == 13 && selectNumber()" ng-init="scrollDown()" ng-model="input.Number" />
+                        <input type="number" ng-click="selectNumber()" ng-keydown="selectNumber()" ng-keyup="$event.keyCode == 13 && submitInput()" ng-init="scrollDown()" ng-model="input.Number" />
                     </div>
                     <div ng-if="convo.Answers[0].AnswerType == 'DATE'">
                         <div id="questionLabel">{{convo.Question}}</div>

@@ -124,6 +124,8 @@ E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\ChabotW
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\ChabotWeb.pdb
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\ChabotWeb.Views.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\ChabotWeb.Views.pdb
+E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -139,12 +141,14 @@ E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microso
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\UrlRewritingNet.UrlRewriter.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
@@ -200,6 +204,8 @@ E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\zh-Hant
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.csprojAssemblyReference.cache
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.AssemblyInfoInputs.cache
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.AssemblyInfo.cs
+E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.csproj.CoreCompileInputs.cache
+E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.MvcApplicationPartsAssemblyInfo.cache
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.RazorAssemblyInfo.cache
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.RazorAssemblyInfo.cs
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.TagHelpers.input.cache
@@ -212,6 +218,7 @@ E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\V
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Query.cshtml.g.cs
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Value.cshtml.g.cs
+E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\botWindow.cshtml.g.cs
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -226,9 +233,3 @@ E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\staticw
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.dll
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.pdb
 E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.genruntimeconfig.cache
-E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
-E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.csproj.CoreCompileInputs.cache
-E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\ChabotWeb.MvcApplicationPartsAssemblyInfo.cache
-E:\Masters\Capstone\Chatbot - VS\Code\ChatbotWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\botWindow.cshtml.g.cs

@@ -3,5 +3,14 @@
     ViewData["Title"] = "Query";
 }
 
-<h1>Query</h1>
+    <div ng-controller="query">
+        <h1>Query</h1>
+        <p>
+            This interaction takes place when the user voluntarily opens the chatbot seeking help from the bot
+            for accessing the application. The bot provides the user with a list of topics with which it would be 
+            able to help the user or it also provides the option of posting the query to the iPPi team and getting it 
+            clarified.
+        </p>
+        <partial name="~/Views/Shared/botWindow.cshtml" />
+    </div>
 
